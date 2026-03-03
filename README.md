@@ -28,7 +28,9 @@ My machine is running macOS 14.3 (25D125), and I have Xcode Version 14.3 (17C529
 	xcodebuild -downloadComponent MetalToolchain
 	```
 
-## The following steps are for compiling the Metal shader and running the host application:
+## The following steps are for compiling the Metal shader and running the host application !!
+
+The Metal Shader is defined in `dense.metal`, and the C++ host code is in `main.cpp`. Follow the steps below to compile and run the application.
 
 4. **Compile the Metal shader:**
 	```sh
@@ -46,6 +48,12 @@ My machine is running macOS 14.3 (25D125), and I have Xcode Version 14.3 (17C529
 	./dense_layer
 	```
 
+7. **Expected Output:**
+	You should see output in the terminal indicating that the dense layer computation was executed successfully on the GPU.
+	```sh
+	cpp/metal % ./dense_layer
+	Output Y[0][0]: 2.1
+	```
 ## References
 
 - [Apple Metal C++ Documentation](https://developer.apple.com/metal/cpp/)
